@@ -21,7 +21,9 @@ int main() {
     // // int and short types work in the same way except short occupies fewer bytes, as we can demonstrate with the sizeof function:
     // std::cout << "Integer (int): " << sizeof(int) << std::endl;
     // std::cout << "Short (short): " << sizeof(short) << std::endl;
-    // std::cout << "Long (long): " << sizeof(long) << std::endl;
+    //std::cout << "Long (long): " << sizeof(long) << std::endl;
+    // // Since on this computer, a long int is the same size as an int (4 bytes), we can also look at the long long type to see how a larger type of int behaves:
+    // std::cout << "Long (long long): " << sizeof(long long) << std::endl;
 
     // // reassigning the short integer we declared earlier to the largest number that can be represented by a short int data type (i.e. the largest number that fits into 2 bytes, i.e. the sizeof(short) we printed earlier
     // // Each byte contains 8 bits, and the conversion from bits in binary to decimal numbers can be made using the programmer setting on a computer calculator)
@@ -42,6 +44,9 @@ int main() {
     // // and the same happens if we assign it to a larger number than the max as with short:
     // integer = 4294967296;
     // std::cout << integer << std::endl;
+
+    // if we try to calculate the max size of a long long integer in our Windows calculator, we see the number increasing but as it reaches 8 bytes it actually displays -1, because even the calculator goes into overflow and cannot display that number
+    // (But 7.5 bytes get us up to 1,152,921,504,606,846,975)
 
     // Textual Data Types
 
