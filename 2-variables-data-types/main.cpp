@@ -78,26 +78,33 @@ int main() {
 
     // Textual Data Types
 
-    // char is a data type which can contain a single character within UTF-8 encoding
-    char c = 'a';
-    // It will always be 1 byte in size
-    std::cout << sizeof(char) << std::endl;
-    std::cout << c << std::endl;
-    // You can also assign a number to char, and it will automatically be converted to a character/symbol
-    c = 80;
-    std::cout << c << std::endl;
-    c = 19;
-    std::cout << c << std::endl;
+    // // char is a data type which can contain a single character within UTF-8 encoding
+    // char c = 'a';
+    // // It will always be 1 byte in size
+    // std::cout << sizeof(char) << std::endl;
+    // std::cout << c << std::endl;
+    // // You can also assign a number to char, and it will automatically be converted to a character/symbol
+    // c = 80;
+    // std::cout << c << std::endl;
+    // c = 19;
+    // std::cout << c << std::endl;
 
-    // A string is essentially an array of characters
-    std::string s = "Hello World!";
-    std::cout << s << std::endl;
-    std::cout << sizeof(std::string) << std::endl;
-
+    // // A string is essentially an array of characters
+    // std::string s = "Hello World!";
+    // std::cout << s << std::endl;
+    // std::cout << sizeof(std::string) << std::endl;
 
     // Boolean
 
+    bool b = true;
+    std::cout << b << std::endl;
+    // Note that the above statement prints out 1; this is because true is evaluated as 1 and 0 is evaluated as false
+    // This also works the other way around, i.e. to assign the value false to a bool, you can either assign b = false or b = 0 and it will work the same
+    b = 0;
+    std::cout << b << std::endl;
 
+    // The size of a boolean will always be 1 byte
+    std::cout << sizeof(bool) << std::endl;
 
     return 0;
 }
