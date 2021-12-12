@@ -1,4 +1,6 @@
 #include <iostream>
+#include <limits.h>
+// This is a library that contains the limits (i.e. max and min values) of data types
 
 int main() {
 
@@ -48,21 +50,31 @@ int main() {
     // if we try to calculate the max size of a long long integer in our Windows calculator, we see the number increasing but as it reaches 8 bytes it actually displays -1, because even the calculator goes into overflow and cannot display that number
     // (But 7.5 bytes get us up to 1,152,921,504,606,846,975)
 
-    std::cout << "Float: " << sizeof(float) << std::endl; // 7 digits of accuracy
-    std::cout << "Double: " << sizeof(double) << std::endl; // 15 digits of accuracy
-    std::cout << "Long Double: " << sizeof(long double) << std::endl;
+    // std::cout << "Float: " << sizeof(float) << std::endl; // 7 digits of accuracy
+    // std::cout << "Double: " << sizeof(double) << std::endl; // 15 digits of accuracy
+    // std::cout << "Long Double: " << sizeof(long double) << std::endl;
 
-    float f = 60.78;
-    double d = 90.876512;
-    long double ld = 9.1834862308752;
+    // float f = 60.78;
+    // double d = 90.876512;
+    // long double ld = 9.1834862308752;
 
-    std::cout << f << std::endl;
-    std::cout << d << std::endl;
-    std::cout << ld << std::endl;
+    // std::cout << f << std::endl;
+    // std::cout << d << std::endl;
+    // std::cout << ld << std::endl;
 
-    // As with ints, assigning a value beyond what the type is able to contain causes issues: (Here shortening of the number to fewer decimal digits)
-    f = 60.8923464;
-    std::cout << f << std::endl;
+    // // As with ints, assigning a value beyond what the type is able to contain causes issues: (Here shortening of the number to fewer decimal digits)
+    // f = 60.8923464;
+    // std::cout << f << std::endl;
+
+    // We can access max/min values through the limits.h library that we've included at the top
+    // For example, these are the max/min for signed ints:
+    std::cout << INT_MAX << std::endl;
+    std::cout << INT_MIN << std::endl;
+    // And these is the max for unsigned ints:
+    std::cout << UINT_MAX << std::endl;
+    // You can also access other data types, such as short:
+    std::cout << SHRT_MAX << std::endl;
+    std::cout << LONG_LONG_MAX << std::endl;
 
     // Textual Data Types
 
