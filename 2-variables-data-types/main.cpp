@@ -66,17 +66,33 @@ int main() {
     // f = 60.8923464;
     // std::cout << f << std::endl;
 
-    // We can access max/min values through the limits.h library that we've included at the top
-    // For example, these are the max/min for signed ints:
-    std::cout << INT_MAX << std::endl;
-    std::cout << INT_MIN << std::endl;
-    // And these is the max for unsigned ints:
-    std::cout << UINT_MAX << std::endl;
-    // You can also access other data types, such as short:
-    std::cout << SHRT_MAX << std::endl;
-    std::cout << LONG_LONG_MAX << std::endl;
+    // // We can access max/min values through the limits.h library that we've included at the top
+    // // For example, these are the max/min for signed ints:
+    // std::cout << INT_MAX << std::endl;
+    // std::cout << INT_MIN << std::endl;
+    // // And these is the max for unsigned ints:
+    // std::cout << UINT_MAX << std::endl;
+    // // You can also access other data types, such as short:
+    // std::cout << SHRT_MAX << std::endl;
+    // std::cout << LONG_LONG_MAX << std::endl;
 
     // Textual Data Types
+
+    // char is a data type which can contain a single character within UTF-8 encoding
+    char c = 'a';
+    // It will always be 1 byte in size
+    std::cout << sizeof(char) << std::endl;
+    std::cout << c << std::endl;
+    // You can also assign a number to char, and it will automatically be converted to a character/symbol
+    c = 80;
+    std::cout << c << std::endl;
+    c = 19;
+    std::cout << c << std::endl;
+
+    // A string is essentially an array of characters
+    std::string s = "Hello World!";
+    std::cout << s << std::endl;
+    std::cout << sizeof(std::string) << std::endl;
 
 
     // Boolean
