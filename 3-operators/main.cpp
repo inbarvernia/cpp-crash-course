@@ -38,14 +38,23 @@ int main() {
   // std::cout << b << std::endl;
   // // This same logic applies for decrementing (b--)
 
-  // Comparison Operators (Relational): == != > < <= >= (These operators always return a boolean value)
+  // // Comparison Operators (Relational): == != > < <= >= (These operators always return a boolean value)
 
+  // int a = 10, b = 20;
+
+  // std::cout << (a < b) << std:: endl;
+  // // Evaluates as 1 which, as previously explained, represents true
+  // std::cout << (a >= b) << std:: endl;
+  // std::cout << (a != b) << std:: endl;
+
+  // Logical Operators: && || !
   int a = 10, b = 20;
 
-  std::cout << (a < b) << std:: endl;
-  // Evaluates as 1 which, as previously explained, represents true
-  std::cout << (a >= b) << std:: endl;
-  std::cout << (a != b) << std:: endl;
+  std::cout << ((a < b) && (a > 5)) << std::endl;
+  std::cout << ((a < b) && (a > 15)) << std::endl;
+  std::cout << ((a < b) || (a > 15)) << std::endl;
+  std::cout << ((a < b) || (a > 51)) << std::endl;
+  std::cout << (!(a < b)) << std::endl;
 
 
   return 0;
