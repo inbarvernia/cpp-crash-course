@@ -7,3 +7,4 @@ So far I've worked through the following sections:
 2. Variables and Data Types
 3. Operators
 4. User Input
+5. Typecasting

@@ -29,5 +29,16 @@ int main() {
   // Whereas if they are typecast into floats, you will get a more accurate result:
   std::cout << (float) a / (float) b << std::endl;
 
+  // Because strings aren't a primitive data type, just as converting a string into an int requires a special function, so does converting an int (or other data type) into a string:
+  std::string seven = std::to_string(a);
+
+  std::cout << seven << std::endl;
+  // Of course, for this example we don't see a difference betwen this and cout << a << endl, because the output is the same
+  // But it becomes useful if we need to use an int as a string, for example to append it to another string, as here:
+  std::string newstring = "This number is: ";
+
+  std::cout << newstring + seven << std::endl;
+  // If we try to substitute seven with a here, we will get a type mismatch error
+
   return 0;
 }
