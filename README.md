@@ -5,3 +5,4 @@ This repo documents my progress through [NeuralNine](https://www.neuralnine.com/
 So far I've worked through the following sections:
 1. "Hello World!"
 2. Variables and Data Types
+3. Operators

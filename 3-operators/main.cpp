@@ -47,15 +47,24 @@ int main() {
   // std::cout << (a >= b) << std:: endl;
   // std::cout << (a != b) << std:: endl;
 
-  // Logical Operators: && || !
-  int a = 10, b = 20;
+  // // Logical Operators: && || !
+  // int a = 10, b = 20;
 
-  std::cout << ((a < b) && (a > 5)) << std::endl;
-  std::cout << ((a < b) && (a > 15)) << std::endl;
-  std::cout << ((a < b) || (a > 15)) << std::endl;
-  std::cout << ((a < b) || (a > 51)) << std::endl;
-  std::cout << (!(a < b)) << std::endl;
+  // std::cout << ((a < b) && (a > 5)) << std::endl;
+  // std::cout << ((a < b) && (a > 15)) << std::endl;
+  // std::cout << ((a < b) || (a > 15)) << std::endl;
+  // std::cout << ((a < b) || (a > 51)) << std::endl;
+  // std::cout << (!(a < b)) << std::endl;
 
+  // Bitwise Operators
+  // This course won't go in-depth with these as they tend to not be used as much
+  // They are used for performing binary operations
+
+  // For example, these are the decimal and binary representations of two numbers:
+  // 15 = 1111
+  // 12 = 1100
+  // Bitwise operators apply logic to a specific bit or digit within the binary number, e.g. taking two binary numbers and applying logic to the last digit of both, or the penultimate digit of both, etc.
+  
 
   return 0;
 }
