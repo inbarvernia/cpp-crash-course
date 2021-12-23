@@ -9,3 +9,4 @@ So far I've worked through the following sections:
 4. User Input
 5. Typecasting
 6. Storage Classes
+7. Conditions
