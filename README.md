@@ -10,3 +10,4 @@ So far I've worked through the following sections:
 5. Typecasting
 6. Storage Classes
 7. Conditions
+8. Switch Case Statement
