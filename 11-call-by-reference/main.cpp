@@ -17,6 +17,18 @@ int main() {
   myFunction(a);
   // We can also see the above when we call myFunction with a again - the value of a taken here is its value after it is updated by refFunction
 
+  // Aliases:
+  
+  // An alias is an additional name that refers to the same variable; for example:
+  int i1 = 10;
+  int &integer1 = i1;
+  // The addition of the & symbol before the variable name in line 24 is, as with calls by reference, a way to assign it not just to the current value of i1, bur also to the same object in memory as i1, which means future changes to either will affect the other of the two
+
+  integer1 += 90;
+
+  std::cout << i1 << std::endl;
+  // We can see that changing the value of integer1 above also affected the value of i1, because they are linked - they are the same variable, which can be called using two different names
+
   return 0;
 }
 
