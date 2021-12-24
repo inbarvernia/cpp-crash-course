@@ -12,6 +12,7 @@ int add(int, int=50, int=90);
 std::string add(std::string, std::string);
 bool isGreaterThan(int, int);
 void myFunction();
+void staticDemo();
 
 int main() {
 
@@ -23,6 +24,8 @@ int main() {
   myFunction();
   // If we tried cout << myFunction() we would get an exception, because myFunction doesn't return anything, which means that it cannot pass any data into cout
 
+  staticDemo();
+  staticDemo();
 
   return 0;
 }
@@ -55,3 +58,11 @@ void myFunction() {
 }
 // A function like the above, which takes no parameters, can also be declared & defined as myFunction(void) - in C++ myFunction() and myFunction(void) are the same, and the former is more commonly used, for brevity
 // However, in C there is a difference between the two: myFunction(void) means myFunction is a function which takes no arguments, whereas myFunction() is a function that takes an unspecified number of arguments of unspecified type, so in C the distinction is important
+
+void staticDemo() {
+  static int x = 0;
+  // This is an example of when the static storage class can make a difference to functionality: here because we are maintaining the value of x in memory instead of reassigning it and freeing it everytime we call this function, when we call the function multiple times, the value of x keeps updating - it never resets to 0
+  // If we remove the keyword static from line 63, we would just get the value 1 printed each time the function is called, because what happens is: it's assigned to memory as 0 (as declared in line 63), then incremented to 1, then output to the terminal, and then deleted from memory; if the function is called again, it will again be declared as 0, then incremented, etc., so we will always get the same value
+  // Whereas because we use the static storage class, it never gets deleted from memory, so what happens is: The first time it's called, it's set to 0, then incremented, then output; it then remains in memory with its current value, so if it gets called again, it doesn't have its value reset/re-declared, and is instead directly incremented again and then output
+  std::cout << ++x << std::endl;
+}
