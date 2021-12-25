@@ -7,6 +7,6 @@ int add(int x, int y) {
 int sub(int x, int y) {
   return x - y;
 }
-void output_message(std::string message) {
+void outputMessage(std::string message) {
   std::cout << message << std::endl;
 } 

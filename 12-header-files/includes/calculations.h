@@ -6,4 +6,4 @@ int add(int, int);
 
 int suc(int, int);
 
-void output_message(std::string message);
+void outputMessage(std::string message);

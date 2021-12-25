@@ -14,3 +14,5 @@ So far I've worked through the following sections:
 9. Loops
 10. Functions
 11. Call By Reference
+12. Header Files
+13. Global Variables
