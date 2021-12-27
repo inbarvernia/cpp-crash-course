@@ -26,5 +26,10 @@ int main() {
     std::cout << yetAnotherArray[i] << std::endl;
   }
 
+  // If we want to access an array item beyond the range, we can (i.e. we don't get an error message):
+  std::cout << yetAnotherArray[50] << std::endl;
+  // However, this can be very unpredictable, as it will access something stored in memory, but what it accesses is essentially undefined and depends on the compiler - most compilers will access something that is stored near to it in memory, but it could even by something from somewhere much further
+  // This is risky even for reading information, but it's particularly risky if you're writing to memory, e.g. setting myArray[50] = 200; could overwrite some important information that was stored in a different part of the memory and was needed for something else
+
   return 0;
 }
