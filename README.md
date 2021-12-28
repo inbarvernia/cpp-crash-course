@@ -18,3 +18,4 @@ So far I've worked through the following sections:
 13. Global Variables
 14. Arrays
 15. Strings
+16. Exception Handling
