@@ -17,3 +17,4 @@ So far I've worked through the following sections:
 12. Header Files
 13. Global Variables
 14. Arrays
+15. Strings
