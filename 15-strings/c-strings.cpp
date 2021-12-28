@@ -34,5 +34,11 @@ int main() {
   strcpy(text1, text2);
   // Because we're taking a string of 200 chars and copying it into a string with max 16 chars, we won't get an error, but will instead go over the bounds, which can cause issues, as previously explained
 
+  // strcmp is a function that compares two strings and returns 0 if they match, or < 0 / > 0 if they don't (< or > depending on the first character that doesn't match and which is greater in ASCII values)
+  strcmp(text1, text2);
+  
+  // strcat is a function that takes two strings and concatenates them together;
+  std::cout << strcat(text1,text2) << std::endl;
+
   return 0;
 }
