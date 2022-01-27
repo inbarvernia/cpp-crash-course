@@ -33,6 +33,11 @@ int squareFunct(int num) {
 #define TRIGGER
 #undef TRIGGER
 
+// There is also the pre-processor directive #error, which intentionally triggers an error; for example, let's say we have two conditions that we expect to be mutually exclusive (e.g. which OS you are on)
+#define COND1
+#define COND2
+// We can put both in nested #ifdef statements, and trigger #error if both are true, since we know they shouldn't be
+
 int main() {
 
   // std::cout << PI << '\n';
@@ -65,6 +70,13 @@ int main() {
 
   #ifdef _WIN64
     std::cout << "This code is running on Windows" << std::endl;
+  #endif
+
+  #ifdef COND1
+  #ifdef COND2
+  // #error 
+  // The above line has been commented out so that the rest of the programme can compile, but can be uncommented out to see how the #error pre-processor directive works
+  #endif
   #endif
 
   return 0;
