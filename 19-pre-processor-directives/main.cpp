@@ -28,6 +28,11 @@ int squareFunct(int num) {
 // If we try to output PI later in the programme, we will now get an error when compiling
 // This can be useful if, for example, we need to define something with a name that is likely to appear in the names of other things (for example, if we #define E (2.71828) to use the mathematical constant in calculations, it would then be useful to #undef E so that not every instance of the letter E gets converted to this number)
 
+// We can also use directives like #ifdef which only execute if something is defined, or #ifndef which only executes if something is not defined
+// For example, at the moment only the #ifndef code inside the main function is being executed; if we commented out #undef TRIGGER, only the #ifdef code would be executed instead
+#define TRIGGER
+#undef TRIGGER
+
 int main() {
 
   // std::cout << PI << '\n';
@@ -44,6 +49,14 @@ int main() {
   std::cout << a << std::endl;
   // When we declare the function as normal (squareFunct), we take the original value of a (5) as an argument, so we multiply a * a within the function (which is then the return value of the function: 5 * 5 = 25), and only then increment a, so that the final value of of a is a + 1, meaning 6 in this case
   // However, when we use the square macro instead, we take the original value of i (5), then increment i by 1 (6), and then take this new value as the second i in our function-like macro (and then increment i again), meaning we are actually multiplying 5 * 6 (= 30), which will be the return value of square(i); because we have incremented i again after taking its value of 6, its final value is 7
+
+  #ifdef TRIGGER
+  std::cout << "TRIGGER is defined!" << std::endl;
+  #endif
+
+  #ifndef TRIGGER
+  std::cout << "TRIGGER is not defined!" << std:: endl;
+  #endif
 
   return 0;
 }
