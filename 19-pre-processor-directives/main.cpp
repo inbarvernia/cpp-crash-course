@@ -23,9 +23,14 @@ int squareFunct(int num) {
     return num * num;
 }
 
+// Another pre-processor directive is #undef, which is a way to undefine something that has previously been defined; for example:
+#undef PI
+// If we try to output PI later in the programme, we will now get an error when compiling
+// This can be useful if, for example, we need to define something with a name that is likely to appear in the names of other things (for example, if we #define E (2.71828) to use the mathematical constant in calculations, it would then be useful to #undef E so that not every instance of the letter E gets converted to this number)
+
 int main() {
 
-  std::cout << PI << '\n';
+  // std::cout << PI << '\n';
   std::cout << SHARED_MEMORY_NAME << '\n';
   
   int arr[MAX_ARR_SIZE];
