@@ -38,6 +38,10 @@ int squareFunct(int num) {
 #define COND2
 // We can put both in nested #ifdef statements, and trigger #error if both are true, since we know they shouldn't be
 
+// Another pre-processor keyword is #pragma; this is not actually part of the C++ standard, but can be used because it's supported by almost every compilers
+#pragma once
+// This is a directive that tells the pre-processor to only include a library or header file once; this can be useful if you are #including two header files which also #include each other, as it stops an endless loop by telling the compiler to only import each header file once even if referred to multiple times
+
 int main() {
 
   // std::cout << PI << '\n';
