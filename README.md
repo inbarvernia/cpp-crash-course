@@ -21,3 +21,5 @@ So far I've worked through the following sections:
 16. Exception Handling
 17. Pointer Basics
 18. Constants
+19. Pre-Processor Directives
+20. Enums
