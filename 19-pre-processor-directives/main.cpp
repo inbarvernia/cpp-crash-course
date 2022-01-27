@@ -58,5 +58,14 @@ int main() {
   std::cout << "TRIGGER is not defined!" << std:: endl;
   #endif
 
+  // These #ifdef directives can also be useful for checking and doing certain things based on what the operating system is; for example:
+  #ifdef __linux__
+    std::cout << "This code is running on a Linux machine" << std::endl;
+  #endif
+
+  #ifdef _WIN64
+    std::cout << "This code is running on Windows" << std::endl;
+  #endif
+
   return 0;
 }
