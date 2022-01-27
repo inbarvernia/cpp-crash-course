@@ -16,6 +16,13 @@
 // One example of an appropriate use of macros:
 # define MAX_ARR_SIZE (16) // used in conjunction with int array below
 
+// We can also define function-like macros, but this can be risky, for example:
+#define square(a) a * a
+// The reason why this can be risky is demonstrated in the example below, with int i = 5, where we compare the above square macro with the below squareFunct function
+int squareFunct(int num) {
+    return num * num;
+}
+
 int main() {
 
   std::cout << PI << '\n';
@@ -23,7 +30,15 @@ int main() {
   
   int arr[MAX_ARR_SIZE];
 
-
+  int i = 5;
+  std::cout << square(i++) << std::endl;
+  std::cout << i << std::endl;
+  // Versus:
+  int a = 5;
+  std::cout << squareFunct(a++) << std::endl;
+  std::cout << a << std::endl;
+  // When we declare the function as normal (squareFunct), we take the original value of a (5) as an argument, so we multiply a * a within the function (which is then the return value of the function: 5 * 5 = 25), and only then increment a, so that the final value of of a is a + 1, meaning 6 in this case
+  // However, when we use the square macro instead, we take the original value of i (5), then increment i by 1 (6), and then take this new value as the second i in our function-like macro (and then increment i again), meaning we are actually multiplying 5 * 6 (= 30), which will be the return value of square(i); because we have incremented i again after taking its value of 6, its final value is 7
 
   return 0;
 }
