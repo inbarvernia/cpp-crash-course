@@ -23,3 +23,4 @@ So far I've worked through the following sections:
 18. Constants
 19. Pre-Processor Directives
 20. Enums
+21. Structs
