@@ -24,3 +24,4 @@ So far I've worked through the following sections:
 19. Pre-Processor Directives
 20. Enums
 21. Structs
+22. Typedef
